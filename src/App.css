@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  background-image: url('/public/Star-background.jpg');
+
+  background-size: cover;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.starTrekLogo {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  width: 6%;
+}
+.starTrekLogo:hover {
+  cursor: pointer;
+}
+.nav-closed {
+  position: absolute;
+  position: fixed;
+  left: 3rem;
+  top: 11rem;
+  width: 10%;
+  height: 0;
+  transition: height 0.5s;
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent space grey */
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.nav-open {
+  position: absolute;
+  position: fixed;
+  left: 3rem;
+  top: 11rem;
+  width: 10%;
+  height: 70%;
+  transition: height 0.5s;
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent space grey */
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 4px solid; /* Set the border width */
+  border-image: linear-gradient(to bottom, #747d8c, #2f3542) 1; /* Set the border image */
+}
+.logo-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.volume-slider {
+  position: relative;
+  left: 1rem;
+  width: 6rem;
+  transform: scale(.75);
+}
