@@ -26,6 +26,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  top: -12rem;
 }
 
 .App-link {
@@ -46,8 +48,17 @@
   left: 1rem;
   width: 6%;
 }
+.starTrekLogo, .nav-bar {
+  z-index: 1;
+}
 .starTrekLogo:hover {
   cursor: pointer;
+}
+.nav-bar {
+  /* ...other styles... */
+  transition: transform 0.5s ease-in-out;
+  /* transform: scaleY(0); */
+  transform-origin: bottom;
 }
 .nav-closed {
   position: absolute;
@@ -57,7 +68,7 @@
   width: 10%;
   height: 0;
   transition: height 0.5s;
-  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent space grey */
+  /* background-color: rgba(40, 44, 52, 0.8); Slightly transparent space grey */
   overflow: hidden;
   border-radius: 1rem;
 }
@@ -75,15 +86,32 @@
   border-radius: 1rem;
   border: 4px solid; /* Set the border width */
   border-image: linear-gradient(to bottom, #747d8c, #2f3542) 1; /* Set the border image */
+  transform: scaleY(1);
+}
+.new-nav-open {
+  position: fixed;
+  left: 3rem;
+  bottom: 5.5rem;
+  width: 10%;
+  height: 70%;
+  transition: height 0.5s;
+  background-color: rgba(40, 44, 52, 0.8); /* Slightly transparent space grey */
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 4px solid; /* Set the border width */
+  border-image: linear-gradient(to bottom, #747d8c, #2f3542) 1; /* Set the border image */
+  z-index:1;
 }
 .logo-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 1;
 }
 .volume-slider {
   position: relative;
   left: 1rem;
   width: 6rem;
   transform: scale(.75);
+  z-index: 99;
 }

@@ -37,9 +37,12 @@ function App() {
           value={volume}
           onChange={handleVolumeChange}
         />
-        <nav className={navOpen ? 'nav-open' : 'nav-closed'}>
+        <nav>
+        <div className={`nav-bar ${navOpen ? 'new-nav-open' : 'nav-closed'}`}></div>
+        <div className={`nav-bar ${navOpen ? 'nav-open new-nav-open' : 'nav-closed'}`}></div>
           {/* Add your navigation links here */}
         </nav>
+
       </div>
 
       <header className="App-header">
